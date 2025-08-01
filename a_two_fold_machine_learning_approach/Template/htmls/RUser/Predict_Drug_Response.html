@@ -1,0 +1,160 @@
+{% extends 'RUser/Header.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICTION OF BOT NET DETECTION!!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="1024" align="center">
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter Sender_IP</div>
+                                    </div></td>
+                                    <td><input type="text" name="Sender_IP"></td>
+                                    <td bordercolor="#FFFFFF" bgcolor="#FF0000"><div align="center" class="style4">Enter Sender_Port</div></td>
+                                    <td><input type="text" name="Sender_Port"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter Target_Ip</div>
+                                    </div></td>
+                                    <td><input type="text" name="Target_Ip"></td>
+                                    <td bordercolor="#FFFFFF" bgcolor="#FF0000"><div align="center" class="style4">Enter Target_Port</div></td>
+                                    <td><input type="text" name="Target_Port"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Transport_Protocol</div></td>
+                                    <td><input type="text" name="Transport_Protocol"></td>
+                                    <td bordercolor="#FFFFFF" bgcolor="#FF0000"><div align="center" class="style4">Enter Duration</div></td>
+                                    <td><input type="text" name="Duration"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4"><span class="style2">Enter </span>AvgDuration</div></td>
+                                    <td><input type="text" name="AvgDuration"></td>
+                                    <td bordercolor="#FFFFFF" bgcolor="#FF0000"><div align="center" class="style4">Enter PBS</div></td>
+                                    <td><input type="text" name="PBS"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter AvgPBS</div></td>
+                                    <td><input type="text" name="AvgPBS"></td>
+                                    <td bordercolor="#FFFFFF" bgcolor="#FF0000"><div align="center" class="style4">Enter TBS</div></td>
+                                    <td><input type="text" name="TBS"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter PBR</div></td>
+                                    <td><input type="text" name="PBR"></td>
+                                    <td bordercolor="#FFFFFF" bgcolor="#FF0000"><div align="center" class="style4">Enter AvgPBR</div></td>
+                                    <td><input type="text" name="AvgPBR"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter TBR</div></td>
+                                    <td><input type="text" name="TBR"></td>
+                                    <td bordercolor="#FFFFFF" bgcolor="#FF0000"><div align="center" class="style4">Enter Missed_Bytes</div></td>
+                                    <td><input type="text" name="Missed_Bytes"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Packets_Sent</div></td>
+                                    <td><input type="text" name="Packets_Sent"></td>
+                                    <td bordercolor="#FFFFFF" bgcolor="#FF0000"><div align="center" class="style4">Enter Packets_Received</div></td>
+                                    <td><input type="text" name="Packets_Received"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter SRPR</div></td>
+                                    <td bgcolor="#FFFFFF"><input type="text" name="SRPR"></td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="289" height="44" bgcolor="#FFFFFF">&nbsp;</td>
+                                    <td width="222"><input name="submit" type="submit" class="style1" value="Predict"></td>
+                                    <td width="318">&nbsp;</td>
+                                    <td width="175">&nbsp;</td>
+                                  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table width="818" height="49" border="0" align="center" >
+                                    <tr><td width="498" bgcolor="#FF0000"><div align="center"><span class="style6">Prediction Of Bot Net Detection Status </span> <span class="style4">:: ---&gt;</span></div></td>
+
+
+
+                                      <td width="310" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center"><strong>{{objs}}</strong></div></td>
+                                    </tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
